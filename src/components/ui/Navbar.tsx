@@ -21,6 +21,8 @@ export default function Navbar() {
              after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0
              after:bg-current after:transition-all after:duration-300
              hover:after:w-full"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Resume
           </Link>
@@ -30,6 +32,8 @@ export default function Navbar() {
              after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0
              after:bg-current after:transition-all after:duration-300
              hover:after:w-full"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             LinkedIn
           </Link>
@@ -39,6 +43,8 @@ export default function Navbar() {
              after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0
              after:bg-current after:transition-all after:duration-300
              hover:after:w-full"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             GitHub
           </Link>
