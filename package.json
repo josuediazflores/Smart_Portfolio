@@ -1,0 +1,43 @@
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run generate && next build",
+    "generate": "npx ts-node ./scripts/generate.ts",
+    "start": "next start",
+    "lint": "next lint"
+  },
+"dependencies": {
+  "@datastax/astra-db-ts": "^1.5.0", 
+  "@langchain/community": "^0.2.33",
+  "@langchain/core": "^0.2.0",
+  "@langchain/textsplitters": "^0.0.1",
+  "@upstash/redis": "^1.28.2",
+  "ai": "^2.2.32",
+  "clsx": "^2.1.0",
+  "dotenv": "^16.4.1",
+  "lucide-react": "^0.320.0",
+  "next": "14.1.0",
+  "next-themes": "^0.2.1",
+  "openai": "^4.104.0",
+  "react": "^18",
+  "react-dom": "^18",
+  "react-markdown": "^9.0.1",
+  "tailwind-merge": "^2.2.1",
+  "ts-node": "^10.9.2"
+},
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "postcss": "^8",
+    "prettier": "^3.2.4",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
+
