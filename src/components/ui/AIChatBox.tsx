@@ -47,10 +47,15 @@ if(open){
         open ? "fixed" : "hidden",
       )}
     >
-      <button onClick={onClose} className="mb-1 ms-auto block">
+      
+      <div className="relative flex h-[600px] flex-col rounded border bg-background shadow-xl">
+        <button 
+        onClick={onClose} 
+        className="mb-1 ms-auto block p-2"
+        >
         <XCircle size={30} className=" rounded-full bg-background" />
       </button>
-      <div className="flex h-[600px] flex-col rounded border bg-background shadow-xl">
+
         <div className="mt-3 h-full overflow-y-auto px-3" ref={scrollRef}>
           {messages.map((message) => (
             <ChatMessage message={message} key={message.id} />
