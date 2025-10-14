@@ -38,7 +38,7 @@ export default function AboutPage() {
 
       <section className="space-y-3">
         <H2>Side projects</H2>
-        <ul className="list-inside list-disc">
+        <ul className="list-inside list-disc space-y-4">
           <li>
             <a
               href="https://www.josuediazflores.com/"
@@ -49,6 +49,9 @@ export default function AboutPage() {
             – This Site :D. Designed to have a chatbot with information about myself.
           </li>
           
+          <li>
+            <strong>NVIDIA Hackathon</strong> – Built an AI-powered lecture summarization tool using NVIDIA's Nemotron models and Parakeet-CTC for automatic speech recognition. Collaborated with my team to help students get better support when reviewing class recordings.
+          </li>
         </ul>
       </section>
 
