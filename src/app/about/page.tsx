@@ -50,7 +50,7 @@ export default function AboutPage() {
           </li>
           
           <li>
-            <strong>NVIDIA Hackathon</strong> – Built an AI-powered lecture summarization tool using NVIDIA's Nemotron models and Parakeet-CTC for automatic speech recognition. Collaborated with my team to help students get better support when reviewing class recordings.
+            <strong>NVIDIA Hackathon</strong> – Built an AI-powered lecture summarization tool using NVIDIA&apos;s Nemotron models and Parakeet-CTC for automatic speech recognition. Collaborated with my team to help students get better support when reviewing class recordings.
           </li>
         </ul>
       </section>
