@@ -52,6 +52,10 @@ export default function AboutPage() {
           <li>
             <strong>NVIDIA Hackathon</strong> – Built an AI-powered lecture summarization tool using NVIDIA&apos;s Nemotron models and Parakeet-CTC for automatic speech recognition. Collaborated with my team to help students get better support when reviewing class recordings.
           </li>
+
+          <li>
+            <strong>AWSxInrix Hackathon</strong> – Built a Dashboard with AWS to monitor student attendance,point systems, and more. This site was to support a non proft organization that gives scholarships to students in need.
+          </li>
         </ul>
       </section>
 
