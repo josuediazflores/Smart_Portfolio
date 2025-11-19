@@ -4,6 +4,7 @@ import { SendHorizonal, Trash, XCircle } from "lucide-react";
 import { Bot } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
+import { TextShimmer } from "@/components/ui/TextShimmer";
 import { useEffect, useRef } from "react";
 
 interface AIChatBoxProps {
@@ -27,14 +28,14 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
 
 
   useEffect(() => {
-    if(scrollRef.current){
+    if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight
     }
-  },[messages])
+  }, [messages])
   useEffect(() => {
-if(open){
-  inputRef.current?.focus();
-}
+    if (open) {
+      inputRef.current?.focus();
+    }
   }, [open])
 
 
@@ -47,27 +48,23 @@ if(open){
         open ? "fixed" : "hidden",
       )}
     >
-      
+
       <div className="relative flex h-[600px] flex-col rounded border bg-background shadow-xl">
-        <button 
-        onClick={onClose} 
-        className="mb-1 ms-auto block p-2"
+        <button
+          onClick={onClose}
+          className="mb-1 ms-auto block p-2"
         >
-        <XCircle size={30} className=" rounded-full bg-background" />
-      </button>
+          <XCircle size={30} className=" rounded-full bg-background" />
+        </button>
 
         <div className="mt-3 h-full overflow-y-auto px-3" ref={scrollRef}>
           {messages.map((message) => (
             <ChatMessage message={message} key={message.id} />
           ))}
           {isLoading && lastMessageIsUser && (
-            <ChatMessage
-              message={{
-                id: "loading",
-                role: "assistant",
-                content: "Thinking...",
-              }}
-            />
+            <TextShimmer as="p" className="text-sm">
+              Thinking...
+            </TextShimmer>
           )}
           {error && (
             <ChatMessage
