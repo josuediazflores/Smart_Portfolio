@@ -37,18 +37,15 @@ export default function AboutPage() {
       <hr className="border-muted" />
 
       <section className="space-y-3">
-        <H2>Side projects</H2>
+        <H2>Hackathons</H2>
         <ul className="list-inside list-disc space-y-4">
           <li>
-            <a
-              href="https://www.josuediazflores.com/"
-              className="text-primary underline-offset-4 hover:underline"
-            >
-              SmartPortfolio
-            </a>{" "}
-            – This Site :D. Designed to have a chatbot with information about myself.
+            <a>
+              Y Combinator Agentic Payment
+            </a>
+            Used Locus MCP and Anthropic models to build an agentic payment system that will automate payment by only using natural language commands.
           </li>
-          
+
           <li>
             <strong>NVIDIA Hackathon</strong> – Built an AI-powered lecture summarization tool using NVIDIA&apos;s Nemotron models and Parakeet-CTC for automatic speech recognition. Collaborated with my team to help students get better support when reviewing class recordings.
           </li>
