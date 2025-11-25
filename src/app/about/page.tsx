@@ -41,7 +41,7 @@ export default function AboutPage() {
         <ul className="list-inside list-disc space-y-4">
           <li>
             <a>
-              Y Combinator Agentic Payment
+              <strong>Y Combinator Agentic Payment</strong> -
             </a>
             Used Locus MCP and Anthropic models to build an agentic payment system that will automate payment by only using natural language commands.
           </li>
