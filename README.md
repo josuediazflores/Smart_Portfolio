@@ -1,4 +1,4 @@
-# 🌐 Smart Portfolio  
+# Smart Portfolio  
 
 A personal developer portfolio built with **Next.js, Tailwind CSS, and Vercel**, featuring an **AI-powered chatbot** that answers questions about me, my projects, and my experience.  
 
@@ -6,7 +6,7 @@ A personal developer portfolio built with **Next.js, Tailwind CSS, and Vercel**,
 
 ---
 
-## 🚀 Features  
+##  Features  
 
 - **Responsive Design** — built with Tailwind CSS for a clean look across desktop & mobile.  
 - **Dark / Light Mode** — toggle seamlessly with `next-themes`.  
