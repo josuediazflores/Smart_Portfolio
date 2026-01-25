@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { H1 } from "@/components/ui/H1";
 import { H2 } from "@/components/ui/H2";
+import duneCover from "@/assets/DUNE.jpg";
 
 export const metadata = {
   title: "About Me",
@@ -60,7 +61,17 @@ export default function AboutPage() {
 
       <section className="space-y-3">
         <H2>Hobbies</H2>
-        <p>I run, go to the gym, read and enjoy exploring mulitiple CS fields. Im currently finishing the first book of Dune and  creating more side projects.</p>
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+          <Image
+            src={duneCover}
+            alt="Dune book cover"
+            className="h-auto w-full max-w-[220px] rounded-lg border border-muted sm:shrink-0"
+            priority
+          />
+          <p>
+            I am currently finishing the first book of Dune and going to read the second book soon in acticipation for the movie.
+          </p>
+        </div>
       </section>
     </section>
   );
