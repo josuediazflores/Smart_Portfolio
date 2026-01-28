@@ -57,6 +57,47 @@ export default function AboutPage() {
         </ul>
       </section>
 
+      <section className="space-y-3">
+        <H2>Education</H2>
+        <div className="space-y-6 pl-4 border-l-2 border-muted">
+          {/* De Anza College */}
+          <div className="space-y-2">
+            <div>
+              <h3 className="font-semibold text-lg">De Anza College</h3>
+              <p className="text-sm text-muted-foreground">Cupertino, CA</p>
+            </div>
+            <p className="text-sm text-muted-foreground">Sept. 2022 - June 2025</p>
+            <p className="font-medium">Associates in Computer Science</p>
+            <div className="mt-2">
+              <p className="text-sm font-medium mb-1">Coursework:</p>
+              <ul className="list-inside list-disc text-sm space-y-1 text-muted-foreground">
+                <li>Discrete Mathematics</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Calculus 1, 2 and 3</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Santa Clara University */}
+          <div className="space-y-2">
+            <div>
+              <h3 className="font-semibold text-lg">Santa Clara University</h3>
+              <p className="text-sm text-muted-foreground">Santa Clara, CA</p>
+            </div>
+            <p className="text-sm text-muted-foreground">Sept. 2025 - Jun. 2027</p>
+            <p className="font-medium">Bachelor of Science in Computer Science</p>
+            <div className="mt-2">
+              <p className="text-sm font-medium mb-1">Activities:</p>
+              <ul className="list-inside list-disc text-sm space-y-1 text-muted-foreground">
+                <li>Theta Tau Professional Engineering Society</li>
+                <li>Association of Computing Machinery (ACM)</li>
+                <li>Artificial Intelligence Collaborate</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <hr className="border-muted" />
 
       <section className="space-y-3">
