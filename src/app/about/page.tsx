@@ -57,6 +57,8 @@ export default function AboutPage() {
         </ul>
       </section>
 
+      <hr className="border-muted" />
+
       <section className="space-y-3">
         <H2>Education</H2>
         <div className="space-y-6 pl-4 border-l-2 border-muted">
