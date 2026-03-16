@@ -41,6 +41,10 @@ export default function AboutPage() {
         <H2>Hackathons</H2>
         <ul className="list-inside list-disc space-y-4">
           <li>
+            <strong>Hack for Humanity Winner 🏆</strong> – Built Prism, a system that helps visually impaired people navigate better through Meta glasses. Trained a VLM model to make it more efficient in detecting people as they walk by and created a VLM Inference Layer where two VLM models work together to achieve higher accuracy.
+          </li>
+
+          <li>
             <a>
               <strong>Y Combinator Agentic Payment</strong> -
             </a>
