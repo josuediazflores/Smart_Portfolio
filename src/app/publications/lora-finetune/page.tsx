@@ -54,7 +54,7 @@ export default function PaperPage() {
     <article className="space-y-8">
       <div className="flex items-center justify-between">
         <Link
-          href="/research"
+          href="/publications"
           className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-primary"
         >
           <svg
@@ -70,7 +70,7 @@ export default function PaperPage() {
               d="M15 19l-7-7 7-7"
             />
           </svg>
-          Back to Research
+          Back to Publications
         </Link>
         <Link
           href="/lora-immigration-case-prediction.pdf"

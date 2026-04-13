@@ -2,14 +2,14 @@ import Link from "next/link";
 import { H1 } from "@/components/ui/H1";
 
 export const metadata = {
-  title: "Research",
-  description: "Research publications by Josue Diaz Flores.",
+  title: "Publications",
+  description: "Publications by Josue Diaz Flores.",
 };
 
 export default function ResearchPage() {
   return (
     <section className="space-y-6">
-      <H1>Research</H1>
+      <H1>Publications</H1>
 
       <p className="text-muted-foreground">
         A collection of my research papers and technical publications.
@@ -57,7 +57,7 @@ export default function ResearchPage() {
 
           <div className="flex items-center gap-4 pt-2">
             <Link
-              href="/research/paper"
+              href="/publications/lora-finetune"
               className="inline-flex items-center gap-1.5 rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Read Paper
