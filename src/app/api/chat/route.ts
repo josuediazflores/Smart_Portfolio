@@ -1,4 +1,3 @@
-// src/app/api/assist/route.ts
 import OpenAI from "openai";
 import { NextRequest } from "next/server";
 import { StreamingTextResponse } from "ai";

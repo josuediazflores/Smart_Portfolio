@@ -20,8 +20,8 @@ A personal developer portfolio built with **Next.js, Tailwind CSS, and Vercel**,
 ## 🛠️ Tech Stack  
 
 - **Framework**: [Next.js](https://nextjs.org/) (App Router)  
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) + shadcn/ui  
-- **AI & State**:OpenAI API  
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)  
+- **AI**: OpenAI API  
 - **Hosting**: [Vercel](https://vercel.com/)  
 - **Version Control**: Git & GitHub  
 
