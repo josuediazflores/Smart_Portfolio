@@ -58,7 +58,7 @@ export default function ProjectCards({ projects }: { projects: Project[] }) {
           >
             <div className={styles.cardHead}>
               <span>{p.meta}</span>
-              <span aria-hidden="true">{isOpen ? "×" : "+"}</span>
+              <span aria-hidden="true">{isOpen ? "Close ↑" : "Details ↓"}</span>
             </div>
             <div className={styles.cardBody}>
               <div className={styles.cardTitle}>{p.title}</div>

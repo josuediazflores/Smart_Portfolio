@@ -46,13 +46,23 @@ function utc(date: string) {
   return new Date(`${date}T00:00:00Z`);
 }
 
-function toLevel(level: number | undefined, count: number): number {
-  if (typeof level === "number" && level >= 0 && level <= 4) return Math.round(level);
-  if (!count) return 0;
-  if (count < 4) return 1;
-  if (count < 7) return 2;
-  if (count < 10) return 3;
-  return 4;
+/**
+ * Map a day's count to one of five shades. Days with no commits stay empty; active days are spread across the
+ * four darker shades by quartile of the user's own active days, so the calendar reads as dense as the
+ * commit total suggests instead of GitHub's absolute scale, which leaves most days at level 1.
+ */
+function levelScale(counts: number[]): (count: number) => number {
+  const active = counts.filter((n) => n > 0).sort((a, b) => a - b);
+  if (active.length === 0) return (count) => (count > 0 ? 4 : 0);
+  const q = (p: number) => active[Math.min(active.length - 1, Math.floor(p * active.length))];
+  const [q1, q2, q3] = [q(0.25), q(0.5), q(0.75)];
+  return (count) => {
+    if (count <= 0) return 0;
+    if (count <= q1) return 1;
+    if (count <= q2) return 2;
+    if (count <= q3) return 3;
+    return 4;
+  };
 }
 
 function shape(days: ApiDay[], total: number): ContributionData {
@@ -62,10 +72,11 @@ function shape(days: ApiDay[], total: number): ContributionData {
   const capacity = CELLS - trailing;
   const shown = sorted.slice(Math.max(0, sorted.length - capacity));
   const leading = CELLS - trailing - shown.length;
+  const toLevel = levelScale(shown.map((d) => d.count));
 
   const cells: (number | null)[] = [
     ...new Array<null>(leading).fill(null),
-    ...shown.map((d) => toLevel(d.level, d.count)),
+    ...shown.map((d) => toLevel(d.count)),
     ...new Array<null>(trailing).fill(null),
   ];
 
