@@ -47,20 +47,20 @@ function utc(date: string) {
 }
 
 /**
- * Map a day's count to one of five shades. Days with no commits stay empty; active days are spread across the
- * four darker shades by quartile of the user's own active days, so the calendar reads as dense as the
- * commit total suggests instead of GitHub's absolute scale, which leaves most days at level 1.
+ * Map a day's count to one of five shades. Days with no commits stay empty. Active days skip the faintest
+ * grey and are spread across the three darkest shades by tercile of the user's own active days, weighted so
+ * most land in the two darkest, matching the design's intent that the calendar reads as dense as the
+ * commit total suggests rather than GitHub's absolute scale, which leaves most days nearly white.
  */
 function levelScale(counts: number[]): (count: number) => number {
   const active = counts.filter((n) => n > 0).sort((a, b) => a - b);
   if (active.length === 0) return (count) => (count > 0 ? 4 : 0);
   const q = (p: number) => active[Math.min(active.length - 1, Math.floor(p * active.length))];
-  const [q1, q2, q3] = [q(0.25), q(0.5), q(0.75)];
+  const [low, mid] = [q(0.3), q(0.6)];
   return (count) => {
     if (count <= 0) return 0;
-    if (count <= q1) return 1;
-    if (count <= q2) return 2;
-    if (count <= q3) return 3;
+    if (count <= low) return 2;
+    if (count <= mid) return 3;
     return 4;
   };
 }
