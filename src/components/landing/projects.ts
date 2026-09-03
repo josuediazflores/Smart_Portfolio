@@ -63,8 +63,8 @@ export const projects: Project[] = [
     result: "Won Hack for Humanity against 60 teams.",
     tags: ["VLM", "Meta glasses", "Python", "Inference"],
     actions: [
-      { label: "Devpost", href: null, kind: "primary" },
-      { label: "GitHub", href: GITHUB, kind: "ghost", external: true },
+      { label: "Devpost", href: "https://devpost.com/software/prism-3q067k", kind: "primary", external: true },
+      { label: "GitHub", href: "https://github.com/sssynk/h4h-ar", kind: "ghost", external: true },
     ],
   },
   {
