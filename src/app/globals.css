@@ -57,3 +57,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Landing: smooth anchor scrolling + card morph (View Transitions API) */
+html {
+  scroll-behavior: smooth;
+}
+::view-transition-group(*) {
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
