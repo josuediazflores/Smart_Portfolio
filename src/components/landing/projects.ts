@@ -48,8 +48,7 @@ export const projects: Project[] = [
     result: "A smaller, cheaper model that keeps the capabilities that matter for agents.",
     tags: ["PyTorch", "Distillation", "Fine-tuning", "Google Cloud"],
     actions: [
-      { label: "Website", href: null, kind: "primary" },
-      { label: "GitHub", href: GITHUB, kind: "ghost", external: true },
+      { label: "GitHub", href: "https://github.com/sssynk/noetic", kind: "primary", external: true },
     ],
   },
   {
